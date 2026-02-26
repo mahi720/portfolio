@@ -37,9 +37,10 @@ import vercelLogo from './assets/tech_logo/vercel.png';
 // import csharpLogo from './assets/tech_logo/csharp.png';
 
 // Experience Section Logo's
-import webverseLogo from './assets/company_logo/webverse_logo.png';
-import agcLogo from './assets/company_logo/agc_logo.png';
-import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
+// import webverseLogo from './assets/company_logo/webverse_logo.png';
+import conic_works from './assets/company_logo/conic_works.webp';
+// import agcLogo from './assets/company_logo/agc_logo.png';
+// import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
 
 // Education Section Logo's
 import rungtaLogo from './assets/education_logo/runtaLog.jpeg';
@@ -54,9 +55,11 @@ import bsebLogo from './assets/education_logo/bsebLogo.jpg';
 import drAppointmentLogo from './assets/work_logo/drAppointment.png';
 import ImagifyLogo from './assets/work_logo/imagify1.png';
 import blogWebsiteLogo from './assets/work_logo/blog_webiste.png';
-import chatAppLogo from './assets/work_logo/chatApp.png';
+import chatAppSocektIo from './assets/work_logo/chatAppSocketIo.png';
 import authenticationLogo from './assets/work_logo/authentication.png';
 import lovePercentageLogo from './assets/work_logo/lovePecentage.png';
+import chatApp from './assets/work_logo/chatApp.png';
+import schoolResult from './assets/work_logo/schoolResult.png';
 // import csprepLogo from './assets/work_logo/cs_prep.png';
 // import movierecLogo from './assets/work_logo/movie_rec.png';
 // import taskremLogo from './assets/work_logo/task_rem.png';
@@ -112,57 +115,55 @@ export const SkillsInfo = [
 export const experiences = [
   {
     id: 0,
-    img: webverseLogo,
-    role: "Fullstack Developer",
-    company: "Webverse Digital",
-    date: "April 2024 - Present",
-    desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
+    img: conic_works,
+    role: "MERN Full Stack Developer",
+    company: "Conic Works Pvt. Ltd.",
+    date: "September 2025 - Present",
+    desc: "Developed and maintained scalable full-stack web applications using the MERN stack (MongoDB, Express.js, React.js, Node js), managing both frontend and backend development. Built secure RESTful APIs with JWT-based authentication and role-based access control, integrated third-party services, and deployed production-ready applications using aaPanel with domain and SSL configuration. Collaborated with cross-functional teams to enhance application performance and ensure efficient project delivery.",
     skills: [
-      "HTML",
-      "CSS",
       "JavaScript",
       "React JS",
-      "TypeScript",
       "Node JS",
       "Tailwind CSS",
-      "MongoDb",
-      "Redux",
-      " Next Js",
+      "MongoDB",
+      "Express JS",
+      "Context API",
+      "aaPanel",
     ],
   },
-  {
-    id: 1,
-    img: agcLogo,
-    role: "Fullstack Engineer",
-    company: "Agumentik Group of Companies",
-    date: "July 2023 - March 2024",
-    desc: "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, PHP, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
-    skills: [
-      "ReactJS",
-      "Redux",
-      "JavaScript",
-      "Tailwind CSS",
-      "HTML",
-      "CSS",
-      "SQL",
-    ],
-  },
-  {
-    id: 2,
-    img: newtonschoolLogo,
-    role: "Frontend Intern",
-    company: "Newton School",
-    date: "September 2021 - August 2022",
-    desc: "Worked as a Frontend Developer Intern, designing and implementing scalable UI components and responsive websites using HTML, CSS, JavaScript, Bootstrap, and Material UI. Collaborated with the design team to translate wireframes and prototypes from Figma into interactive, user-friendly web pages.",
-    skills: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Bootstrap",
-      "Figma",
-      "Material UI",
-    ],
-  },
+  // {
+  //   id: 1,
+  //   img: agcLogo,
+  //   role: "Fullstack Engineer",
+  //   company: "Agumentik Group of Companies",
+  //   date: "July 2023 - March 2024",
+  //   desc: "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, PHP, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
+  //   skills: [
+  //     "ReactJS",
+  //     "Redux",
+  //     "JavaScript",
+  //     "Tailwind CSS",
+  //     "HTML",
+  //     "CSS",
+  //     "SQL",
+  //   ],
+  // },
+  // {
+  //   id: 2,
+  //   img: newtonschoolLogo,
+  //   role: "Frontend Intern",
+  //   company: "Newton School",
+  //   date: "September 2021 - August 2022",
+  //   desc: "Worked as a Frontend Developer Intern, designing and implementing scalable UI components and responsive websites using HTML, CSS, JavaScript, Bootstrap, and Material UI. Collaborated with the design team to translate wireframes and prototypes from Figma into interactive, user-friendly web pages.",
+  //   skills: [
+  //     "HTML",
+  //     "CSS",
+  //     "Javascript",
+  //     "Bootstrap",
+  //     "Figma",
+  //     "Material UI",
+  //   ],
+  // },
 ];
 
 export const education = [
@@ -171,7 +172,7 @@ export const education = [
     img: rungtaLogo,
     school: "Rungta College of engineering and Technology, Bhilai",
     date: "July 2021 - July 2025",
-    grade: "7.63 CGPA",
+    grade: "7.72 CGPA",
     desc: "I have completed my Bachelor's degree (B.Tech) in Computer Science Engineering from, Rungta College of engineering and Technology, Bhilai. During my time at RCET, I gained a strong foundation in my core subjects. I actively participated in various workshops and technical events, which enhanced my skills and knowledge.",
     degree: "Bachelor of Technology - B.Tech (Computer Science Engineering)",
   },
@@ -231,7 +232,7 @@ export const projects = [
     title: "Chat Application",
     description:
       "Implemented live chat using Socket.io for instant two-way communication between users. Secured login/signup system using JWT (JSON Web Tokens) or sessions. Built backend APIs using Node.js + Express for managing users, messages, and chat rooms. Used MongoDB as the database to store user profiles, chat history, and real-time messages. Designed a clean, mobile-friendly UI with Tailwind CSS, supporting dark mode and modern chat layout.",
-    image: chatAppLogo,
+    image: chatAppSocektIo,
     tags: ["React JS", "Node.js", "Socket.io", "Zustand", "Tailwind CSS", "Express", "MonogoDB", "VS Code"],
     github: "https://github.com/mahi720/chat-app-deploy",
     webapp: "https://chat-app-deploy-jot9.onrender.com/login",
@@ -246,36 +247,38 @@ export const projects = [
     github: "https://github.com/mahi720/authentication_fullCode",
     webapp: "https://authentication-frontend-nine.vercel.app/signup",
   },
-    {
-      id: 5,
-      title: "Calculate Love Percentage",
-      description:
-        "A fun and interactive web application built using HTML, CSS, and JavaScript to calculate the 'love compatibility' between two names. Users enter two names to get a playful 'love percentage' result. Randomized logic with engaging UI animations for a fun user experience. Responsive design that works well on both desktop and mobile devices.",
-      image: lovePercentageLogo,
-      tags: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/mahi720/love-percentage",
-      webapp: "https://checklovepercentage.netlify.app/",
-    },
-  //   {
-  //     id: 6,
-  //     title: "Coding Master",
-  //     description:
-  //       "An ed-tech platform where users can access tech and coding-related blogs, notes, interview questions, e-books, and premium content with payment integration. Built with full-stack technologies for a seamless learning experience.",
-  //     image: cmLogo,
-  //     tags: ["React JS", "Node.js", "MongoDB", "Express", "Payment Integration"],
-  //     github: "https://codingmasterweb.in/",
-  //     webapp: "https://codingmasterweb.in/",
-  //   },
-  //   {
-  //     id: 7,
-  //     title: "Image Search App",
-  //     description:
-  //       "A React.js-based image search application that allows users to search and download high-quality images from the web. Built using external APIs to ensure a vast library of results for various queries.",
-  //     image: imagesearchLogo,
-  //     tags: ["React JS", "API", "Search Feature", "CSS", "Javascript"],
-  //     github: "https://github.com/codingmastr/Image-Search-App",
-  //     webapp: "https://imagsearch.netlify.app/",
-  //   },
+  {
+    id: 5,
+    title: "Calculate Love Percentage",
+    description:
+      "A fun and interactive web application built using HTML, CSS, and JavaScript to calculate the 'love compatibility' between two names. Users enter two names to get a playful 'love percentage' result. Randomized logic with engaging UI animations for a fun user experience. Responsive design that works well on both desktop and mobile devices.",
+    image: lovePercentageLogo,
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/mahi720/love-percentage",
+    webapp: "https://checklovepercentage.netlify.app/",
+  },
+
+  {
+    id: 6,
+    title: "School Result Management System For Company",
+    description:
+      "A full-stack school result management system built with the MERN stack, featuring role-based access control for Admin and Employee users. The Admin can manage employees and monitor activities, while employees can create and manage student results. Includes secure authentication and Excel export functionality for bulk result reporting.",
+    image: schoolResult,
+    tags: ["React JS", "Context Api", "Search Feature", "Tailwind CSS", "Node js", "Express", "MongoDB"],
+    github: "https://github.com/mahi720/schoolFrontend",
+    webapp: "http://schoolform.conicworks.com/",
+  },
+
+  {
+    id: 7,
+    title: "Chat Application For Company",
+    description:
+      "A hierarchical role-based chat application built with the MERN stack, supporting Super Admin, Admin, District, and Block roles. Enables group and one-to-one messaging with controlled access permissions and automatic Super Admin inclusion in all threads. Includes an analytics dashboard for monitoring user activity and thread statistics.",
+    image: chatApp,
+    tags: ["React JS", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+    github: "https://github.com/mahi720/govtFrontend",
+    webapp: "http://chatapp.conicworks.com/",
+  },
   //   {
   //     id: 8,
   //     title: "Image Background Remover",
