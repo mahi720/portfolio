@@ -36,9 +36,9 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a fresher full-stack developer with a strong foundation in
-            building scalable web applications. Skilled in both front-end and
-            back-end development, I specialize in the MERN stack.
+          MERN Full Stack Developer with industry experience in developing and deploying full-stack web applications. 
+          Proficient in React.js, Node.js, Express.js, and MongoDB, with strong knowledge of RESTful APIs, role-based 
+          access control, and production deployment on Linux servers
           </p>
           {/* Resume Button */}
           <a
