@@ -277,7 +277,7 @@ export const projects = [
     image: chatApp,
     tags: ["React JS", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
     github: "https://github.com/mahi720/govtFrontend",
-    webapp: "http://chatapp.conicworks.com/",
+    webapp: "https://chatapp.conicworks.com/",
   },
   //   {
   //     id: 8,
