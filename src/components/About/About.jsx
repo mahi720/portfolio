@@ -40,11 +40,10 @@ const About = () => {
           Proficient in React.js, Node.js, Express.js, and MongoDB, with strong knowledge of RESTful APIs, role-based 
           access control, and production deployment on aaPanel Linux servers.
           </p>
-          {/* Resume Button */}
          {/* Resume Buttons */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mt-5">
             <a
-              href="https://drive.google.com/file/d/1iA32T2kpE16ythaf8eD9naKZ2_dxSYUq/view?usp=sharing"
+              href="https://drive.google.com/file/d/17w5zMDeq9zCfWbFIqyQcaPtnZtDa-SFY/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105"
