@@ -41,18 +41,30 @@ const About = () => {
           access control, and production deployment on aaPanel Linux servers.
           </p>
           {/* Resume Button */}
-          <a
-            href="https://drive.google.com/file/d/17w5zMDeq9zCfWbFIqyQcaPtnZtDa-SFY/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
-            style={{
-              background: "linear-gradient(90deg, #8245ec, #a855f7)",
-              boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
-            }}
-          >
-            DOWNLOAD CV
-          </a>
+         {/* Resume Buttons */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mt-5">
+            <a
+              href="https://drive.google.com/file/d/1iA32T2kpE16ythaf8eD9naKZ2_dxSYUq/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105"
+              style={{
+                background: "linear-gradient(90deg, #8245ec, #a855f7)",
+                boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
+              }}
+            >
+              DOWNLOAD CV
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1VCRusKlC5upp3G08ACI6mRalDKF9_ul1/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#a855f7] py-3 px-8 rounded-full text-lg font-bold border-2 border-[#8245ec] transition duration-300 transform hover:scale-105 hover:bg-[#8245ec] hover:text-white"
+            >
+              DOWNLOAD CV
+            </a>
+          </div>
         </div>
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
