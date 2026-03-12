@@ -132,7 +132,7 @@ const Education = () => {
     <section
       id="education"
       ref={sectionRef}
-      className="relative py-32 px-[7vw] md:px-[7vw] lg:px-[16vw] font-sans overflow-hidden"
+      className="relative py-15 px-[7vw] md:px-[7vw] lg:px-[16vw] font-sans overflow-hidden"
     >
       {/* Background decorative elements - Slow animations */}
       <div className="absolute inset-0 -z-10">
