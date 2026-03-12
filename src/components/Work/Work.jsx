@@ -288,68 +288,50 @@ const Work = () => {
       </div>
 
       {/* Enhanced See More / See Less Button */}
+      
       {projects.length > 6 && (
         <div className="flex justify-center mt-16">
           <button
             onClick={isExpanded ? handleSeeLess : handleSeeMore}
-            className="group relative px-10 py-5 bg-gradient-to-r from-[#8245ec] via-[#a855f7] to-[#8245ec] text-white rounded-full font-semibold text-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/40 overflow-hidden bg-300% animate-gradient"
+            className="group relative px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 text-white transition-all duration-300 hover:bg-white/20 hover:border-white/40"
           >
-            {/* Animated background effect */}
-            <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
-
-            {/* Button content */}
-            <span className="relative z-10 flex items-center gap-3">
+            <span className="flex items-center gap-2">
               {isExpanded ? (
                 <>
-                  <span className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5 transform group-hover:-translate-y-1 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M5 15l7-7 7 7"
-                      />
-                    </svg>
-                    Show Less Projects
-                  </span>
-                  <span className="w-px h-6 bg-white/30 mx-2"></span>
-                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full">
-                    {visibleProjects} / {projects.length}
-                  </span>
+                  <svg
+                    className="w-4 h-4 transform group-hover:-translate-y-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2.5}
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  Show Less
                 </>
               ) : (
                 <>
-                  <span className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5 transform group-hover:translate-y-1 transition-transform duration-300"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2.5}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                    Explore All Projects
-                  </span>
-                  <span className="w-px h-6 bg-white/30 mx-2"></span>
-                  <span className="text-sm bg-white/20 px-3 py-1 rounded-full animate-pulse">
-                    +{projects.length - 6} More
-                  </span>
+                  <svg
+                    className="w-4 h-4 transform group-hover:translate-y-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2.5}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                  Show More
                 </>
               )}
             </span>
-
-            {/* Shine effect */}
-            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
           </button>
         </div>
       )}
