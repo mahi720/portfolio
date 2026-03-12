@@ -122,7 +122,8 @@ const Skills = () => {
       </div>
 
       {/* Skill Categories */}
-      <div className="flex flex-wrap gap-6 lg:gap-8 py-10 justify-center">
+      {/* <div className="flex flex-wrap gap-6 lg:gap-8 py-10 justify-center"> */}
+      <div className="flex flex-wrap gap-6 lg:gap-8 mt-6 justify-center">
         {SkillsInfo.map((category, index) => (
           <Tilt
             key={category.title}
