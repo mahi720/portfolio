@@ -137,7 +137,7 @@ const Experience = () => {
     <section
       id="experience"
       ref={sectionRef}
-      className="relative py-32 px-[7vw] md:px-[7vw] lg:px-[16vw] font-sans overflow-hidden"
+      className="relative py-19 px-[7vw] md:px-[7vw] lg:px-[16vw] font-sans overflow-hidden"
     >
       {/* Background decorative elements - Slow pulsing */}
       <div className="absolute inset-0 -z-10">
