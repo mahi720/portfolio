@@ -326,7 +326,7 @@ const Navbar = () => {
       {/* Animated gradient border at bottom */}
       {/* <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8245ec] to-transparent animate-gradient-x-slow"></div> */}
 
-      <div className="text-white py-10 flex justify-between items-center relative">
+      <div className="text-white py-5 flex justify-between items-center relative">
         {/* Logo with enhanced animation */}
         <div className="relative group">
           <div className="absolute -inset-2 bg-gradient-to-r from-[#8245ec] to-[#a855f7] rounded-lg blur opacity-0 group-hover:opacity-50 transition-all duration-700"></div>
