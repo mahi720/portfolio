@@ -130,7 +130,7 @@ const About = () => {
 
           {/* Skills Heading with Typing Effect */}
           <div className="animate-fadeInUp animation-delay-400">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 leading-tight">
+            <h3 className="text-xs sm:text-2xl md:text-3xl font-semibold mb-4 leading-tight">
               <span className="text-gray-300">I am a </span>
               <span className="bg-gradient-to-r from-[#8245ec] to-[#a855f7] bg-clip-text text-transparent font-bold">
                 <ReactTypingEffect
