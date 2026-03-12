@@ -300,18 +300,18 @@ const Education = () => {
                         </span>
                       </div>
                       {/* Progress bar */}
-                      <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
-                        <div
-                          className={`h-full bg-gradient-to-r ${getGradient(index)} animate-width-grow-slow`}
-                          style={{
-                            width: edu.grade.includes("%")
-                              ? edu.grade
-                              : edu.grade.includes("CGPA")
-                                ? "85%"
-                                : "90%",
-                          }}
-                        ></div>
-                      </div>
+<div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+  <div
+    className={`h-full bg-gradient-to-r ${getGradient(index)} animate-progress-grow`}
+    style={{
+      "--progress-width": edu.grade.includes("%")
+        ? edu.grade
+        : edu.grade.includes("CGPA")
+        ? `${parseFloat(edu.grade) * 9.5}%`
+        : "80%",
+    }}
+  ></div>
+</div>
                     </div>
 
                     {/* Description with icon */}
@@ -442,6 +442,19 @@ const Education = () => {
             transform: scale(1.3);
           }
         }
+
+        @keyframes progress-grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.animate-progress-grow {
+  animation: progress-grow 2s ease-out forwards;
+}
 
         @keyframes float-slow {
           0%,
