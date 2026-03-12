@@ -207,7 +207,7 @@ const Work = () => {
     <section
       id="work"
       ref={sectionRef}
-      className="relative py-24 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans overflow-hidden"
+      className="relative py-20 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
