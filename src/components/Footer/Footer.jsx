@@ -196,7 +196,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-8 animate-slideIn-slow animation-delay-400">
+        <nav className="flex flex-wrap justify-center gap-2 sm:gap-5 mb-8 animate-slideIn-slow animation-delay-400">
           {[
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
