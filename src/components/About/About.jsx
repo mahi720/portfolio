@@ -136,6 +136,7 @@ const About = () => {
                 <ReactTypingEffect
                   text={[
                     "MERN Stack Developer.",
+                    "Full Stack Developer.",
                     "Web Developer.",
                     "Problem Solver.",
                     "Tech Enthusiast.",
