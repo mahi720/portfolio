@@ -101,7 +101,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative py-8 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32 overflow-hidden"
+      className="relative py-3 px-[7vw] md:px-[7vw] lg:px-[16vw] font-sans mt-16 md:mt-24 lg:mt-32 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
