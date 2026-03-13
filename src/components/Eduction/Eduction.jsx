@@ -328,7 +328,7 @@ const Education = () => {
                     <div className="flex flex-wrap gap-2 mt-6">
                       {edu.degree.split(" ").map(
                         (word, i) =>
-                          word.length > 2 && (
+                          word.length > 3 && (
                             <span
                               key={i}
                               className="px-3 py-1 bg-gradient-to-r from-purple-600/10 to-pink-600/10 text-purple-400 rounded-full text-xs font-medium border border-purple-500/30 hover:border-purple-500 transition-all duration-700 hover:scale-105"
