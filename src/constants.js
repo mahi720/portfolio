@@ -38,7 +38,7 @@ import jwtLogo from './assets/tech_logo/jwtLogo.png';
 import roleBasedAccessControl from "./assets/tech_logo/roleBasedAccessControl.png"
 import aaPanelLogo from './assets/tech_logo/aaPanelLogo1.png';
 import renderLogo from './assets/tech_logo/renderLogo.png';
-import razorPayLogo from './assets/tech_logo/razorPayLogo.png';
+import razorPayLogo from './assets/tech_logo/razorpaylogo.png';
 import sslLogo from './assets/tech_logo/SSLSecurityIcon.png'
 // import csharpLogo from './assets/tech_logo/csharp.png';
 
