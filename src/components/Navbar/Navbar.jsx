@@ -243,28 +243,26 @@ const Navbar = () => {
 
   // Intersection observer for active section
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.5,
-        rootMargin: "-100px 0px -100px 0px",
-      },
-    );
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id]");
+      const scrollY = window.scrollY;
 
-    const sections = document.querySelectorAll("section[id]");
-    sections.forEach((section) => observer.observe(section));
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
 
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-      observer.disconnect();
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          setActiveSection(sectionId);
+        }
+      });
     };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   // Close mobile menu on resize
   useEffect(() => {
