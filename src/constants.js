@@ -33,7 +33,13 @@ import postmanLogo from './assets/tech_logo/postman.png';
 // import figmaLogo from './assets/tech_logo/figma.png';
 import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
-// import postgreLogo from './assets/tech_logo/postgre.png';
+import postgreLogo from './assets/tech_logo/postgre.png';
+import jwtLogo from './assets/tech_logo/jwtLogo.png';
+import roleBasedAccessControl from "./assets/tech_logo/roleBasedAccessControl.png"
+import aaPanelLogo from './assets/tech_logo/aaPanelLogo1.png';
+import renderLogo from './assets/tech_logo/renderLogo.png';
+import razorPayLogo from './assets/tech_logo/razorPayLogo.png';
+import sslLogo from './assets/tech_logo/SSLSecurityIcon.png'
 // import csharpLogo from './assets/tech_logo/csharp.png';
 
 // Experience Section Logo's
@@ -76,7 +82,7 @@ export const SkillsInfo = [
     skills: [
       { name: 'HTML', logo: htmlLogo },
       { name: 'CSS', logo: cssLogo },
-      { name: 'JavaScript', logo: javascriptLogo },
+      // { name: 'JavaScript', logo: javascriptLogo },
       { name: 'React JS', logo: reactjsLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
       { name: 'Bootstrap', logo: bootstrapLogo },
@@ -88,9 +94,16 @@ export const SkillsInfo = [
     skills: [
       { name: 'Node JS', logo: nodejsLogo },
       { name: 'Express JS', logo: expressjsLogo },
-      { name: 'MySQL', logo: mysqlLogo },
+      { name: 'JWT', logo: jwtLogo },
+      { name: 'Role Based Access Control', logo: roleBasedAccessControl },
+    ],
+  },
+  {
+    title: 'DataBase',
+    skills: [
       { name: 'MongoDB', logo: mongodbLogo },
-      { name: 'Cloudinary', logo: cloudinaryLogo }
+      { name: 'MySQL', logo: mysqlLogo },
+      { name: 'PostgreSQL', logo: postgreLogo },
     ],
   },
   {
@@ -101,13 +114,23 @@ export const SkillsInfo = [
     ],
   },
   {
+    title: 'Server / Deployment',
+    skills: [
+      { name: 'Vercel', logo: vercelLogo },
+      { name: 'Netlify', logo: netlifyLogo },
+      { name: "aaPanel", logo: aaPanelLogo },
+      { name: "SSL Configuration", logo: sslLogo },
+      { name: "Render", logo: renderLogo },
+    ],
+  },
+  {
     title: 'Tools',
     skills: [
       { name: 'GitHub', logo: githubLogo },
       { name: 'VS Code', logo: vscodeLogo },
       { name: 'Postman', logo: postmanLogo },
-      { name: 'Vercel', logo: vercelLogo },
-      { name: 'Netlify', logo: netlifyLogo },
+      { name: 'Cloudinary', logo: cloudinaryLogo },
+      { name: 'Razorpay', logo: razorPayLogo },
     ],
   },
 ];
@@ -277,7 +300,7 @@ export const projects = [
     image: chatApp,
     tags: ["React JS", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
     github: "https://github.com/mahi720/govtFrontend",
-    webapp: "https://chatapp.conicworks.com/",
+    webapp: "http://chatapp.conicworks.com/",
   },
   //   {
   //     id: 8,
