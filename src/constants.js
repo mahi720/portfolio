@@ -221,69 +221,20 @@ export const education = [
 ];
 
 export const projects = [
-  {
+
+   {
     id: 0,
-    title: "Doctor Appointment Booking",
+    title: "Chat Application For Company",
     description:
-      "Create login and sign up page, use node Js for backend and react Js for frontend and use mongoose DB for database. In User Panel, User book appointment and cancel appointment, after booking appointment user also pay appointment fee to use razorpay. In Doctor Panel, doctor approve the appointment and cancel the appointment, doctor edit own profile, doctor view all appointment and also doctor show total earning. In Admin Panel, Admin add and manage doctors, View a list of all doctors, appointments, and total number of patients, and also cancel patient appointments.",
-    image: drAppointmentLogo,
-    tags: ["React Js", "Node Js", "Tailwind CSS", "Express", "MonogoDB", "VS Code"],
-    github: "https://github.com/mahi720/drAppointment_full_code",
-    webapp: "https://dr-appointment-page.vercel.app/",
-  },
-  {
-    id: 1,
-    title: "AI Image Generation",
-    description:
-      "User registration and secure login system, Each user is provided with 5 free credits for image generation upon signup. Integrated the ClipDrop API to generate high - quality images based on user inputs. Built a credit - based system where users can generate images based on available credits. Implemented Razorpay payment gateway for purchasing additional credits securely.",
-    image: ImagifyLogo,
-    tags: ["React Js", "Node Js", "Tailwind CSS", "Express", "MonogoDB", "VS Code", "Clipdrop API", "Razorpay"],
-    github: "https://github.com/mahi720/Imagify_full_code",
-    webapp: "https://imagify-imageai.vercel.app/",
-  },
-  {
-    id: 2,
-    title: "Blog Website",
-    description:
-      "User Panel, User registration and login functionality, Features for reading blogs, liking, commenting, and sharing blogs. User profile management, including editing profile details. Admin Panel, Blog management system for creating, editing, and deleting blogs.Ability to view and manage likes and comments on blogs. Admin profile management for updating personal details.",
-    image: blogWebsiteLogo,
-    tags: ["React Js", "Node Js", "Tailwind CSS", "Express", "MonogoDB", "VS Code"],
-    github: "https://github.com/mahi720/Blog_Website_Full_Code",
-    webapp: "https://crowdlion.netlify.app/",
-  },
-  {
-    id: 3,
-    title: "Chat Application",
-    description:
-      "Implemented live chat using Socket.io for instant two-way communication between users. Secured login/signup system using JWT (JSON Web Tokens) or sessions. Built backend APIs using Node.js + Express for managing users, messages, and chat rooms. Used MongoDB as the database to store user profiles, chat history, and real-time messages. Designed a clean, mobile-friendly UI with Tailwind CSS, supporting dark mode and modern chat layout.",
-    image: chatAppSocektIo,
-    tags: ["React JS", "Node.js", "Socket.io", "Zustand", "Tailwind CSS", "Express", "MonogoDB", "VS Code"],
-    github: "https://github.com/mahi720/chat-app-deploy",
-    webapp: "https://chat-app-deploy-jot9.onrender.com/login",
-  },
-  {
-    id: 4,
-    title: "Authentication",
-    description:
-      "In this project, I learned how to implement Mailtrap for user login and password reset functionality. User sign-up and login system using JWT tokens. On login, a 6-digit OTP is sent to the user’s email using Mailtrap SMTP service. Users can request a password reset by entering their email. A reset OTP is sent via Mailtrap. Auth state (user info, JWT token, loading state, errors) is managed using Zustand.",
-    image: authenticationLogo,
-    tags: ["Mailtrap", "React JS", "Node.js", "Zustand", "Tailwind CSS", "Express", "MonogoDB", "VS Code"],
-    github: "https://github.com/mahi720/authentication_fullCode",
-    webapp: "https://authentication-frontend-nine.vercel.app/signup",
-  },
-  {
-    id: 5,
-    title: "Calculate Love Percentage",
-    description:
-      "A fun and interactive web application built using HTML, CSS, and JavaScript to calculate the 'love compatibility' between two names. Users enter two names to get a playful 'love percentage' result. Randomized logic with engaging UI animations for a fun user experience. Responsive design that works well on both desktop and mobile devices.",
-    image: lovePercentageLogo,
-    tags: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/mahi720/love-percentage",
-    webapp: "https://checklovepercentage.netlify.app/",
+      "A hierarchical role-based chat application built with the MERN stack, supporting Super Admin, Admin, District, and Block roles. Enables group and one-to-one messaging with controlled access permissions and automatic Super Admin inclusion in all threads. Includes an analytics dashboard for monitoring user activity and thread statistics.",
+    image: chatApp,
+    tags: ["React JS", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+    github: "https://github.com/mahi720/govtFrontend",
+    webapp: "http://chatapp.conicworks.com/",
   },
 
   {
-    id: 6,
+    id: 1,
     title: "School Result Management System For Company",
     description:
       "A full-stack school result management system built with the MERN stack, featuring role-based access control for Admin and Employee users. The Admin can manage employees and monitor activities, while employees can create and manage student results. Includes secure authentication and Excel export functionality for bulk result reporting.",
@@ -293,16 +244,70 @@ export const projects = [
     webapp: "http://schoolform.conicworks.com/",
   },
 
+    {
+    id: 2,
+    title: "AI Image Generation",
+    description:
+      "User registration and secure login system, Each user is provided with 5 free credits for image generation upon signup. Integrated the ClipDrop API to generate high - quality images based on user inputs. Built a credit - based system where users can generate images based on available credits. Implemented Razorpay payment gateway for purchasing additional credits securely.",
+    image: ImagifyLogo,
+    tags: ["React Js", "Node Js", "Tailwind CSS", "Express", "MonogoDB", "VS Code", "Clipdrop API", "Razorpay"],
+    github: "https://github.com/mahi720/Imagify_full_code",
+    webapp: "https://imagify-imageai.vercel.app/",
+  },
+
+   {
+    id: 3,
+    title: "Blog Website",
+    description:
+      "User Panel, User registration and login functionality, Features for reading blogs, liking, commenting, and sharing blogs. User profile management, including editing profile details. Admin Panel, Blog management system for creating, editing, and deleting blogs.Ability to view and manage likes and comments on blogs. Admin profile management for updating personal details.",
+    image: blogWebsiteLogo,
+    tags: ["React Js", "Node Js", "Tailwind CSS", "Express", "MonogoDB", "VS Code"],
+    github: "https://github.com/mahi720/Blog_Website_Full_Code",
+    webapp: "https://crowdlion.netlify.app/",
+  },
+  
+  {
+    id: 4,
+    title: "Doctor Appointment Booking",
+    description:
+      "Create login and sign up page, use node Js for backend and react Js for frontend and use mongoose DB for database. In User Panel, User book appointment and cancel appointment, after booking appointment user also pay appointment fee to use razorpay. In Doctor Panel, doctor approve the appointment and cancel the appointment, doctor edit own profile, doctor view all appointment and also doctor show total earning. In Admin Panel, Admin add and manage doctors, View a list of all doctors, appointments, and total number of patients, and also cancel patient appointments.",
+    image: drAppointmentLogo,
+    tags: ["React Js", "Node Js", "Tailwind CSS", "Express", "MonogoDB", "VS Code"],
+    github: "https://github.com/mahi720/drAppointment_full_code",
+    webapp: "https://dr-appointment-page.vercel.app/",
+  },
+
+  {
+    id: 5,
+    title: "Chat Application",
+    description:
+      "Implemented live chat using Socket.io for instant two-way communication between users. Secured login/signup system using JWT (JSON Web Tokens) or sessions. Built backend APIs using Node.js + Express for managing users, messages, and chat rooms. Used MongoDB as the database to store user profiles, chat history, and real-time messages. Designed a clean, mobile-friendly UI with Tailwind CSS, supporting dark mode and modern chat layout.",
+    image: chatAppSocektIo,
+    tags: ["React JS", "Node.js", "Socket.io", "Zustand", "Tailwind CSS", "Express", "MonogoDB", "VS Code"],
+    github: "https://github.com/mahi720/chat-app-deploy",
+    webapp: "https://chat-app-deploy-jot9.onrender.com/login",
+  },
+  {
+    id: 6,
+    title: "Authentication",
+    description:
+      "In this project, I learned how to implement Mailtrap for user login and password reset functionality. User sign-up and login system using JWT tokens. On login, a 6-digit OTP is sent to the user’s email using Mailtrap SMTP service. Users can request a password reset by entering their email. A reset OTP is sent via Mailtrap. Auth state (user info, JWT token, loading state, errors) is managed using Zustand.",
+    image: authenticationLogo,
+    tags: ["Mailtrap", "React JS", "Node.js", "Zustand", "Tailwind CSS", "Express", "MonogoDB", "VS Code"],
+    github: "https://github.com/mahi720/authentication_fullCode",
+    webapp: "https://authentication-frontend-nine.vercel.app/signup",
+  },
   {
     id: 7,
-    title: "Chat Application For Company",
+    title: "Calculate Love Percentage",
     description:
-      "A hierarchical role-based chat application built with the MERN stack, supporting Super Admin, Admin, District, and Block roles. Enables group and one-to-one messaging with controlled access permissions and automatic Super Admin inclusion in all threads. Includes an analytics dashboard for monitoring user activity and thread statistics.",
-    image: chatApp,
-    tags: ["React JS", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
-    github: "https://github.com/mahi720/govtFrontend",
-    webapp: "http://chatapp.conicworks.com/",
+      "A fun and interactive web application built using HTML, CSS, and JavaScript to calculate the 'love compatibility' between two names. Users enter two names to get a playful 'love percentage' result. Randomized logic with engaging UI animations for a fun user experience. Responsive design that works well on both desktop and mobile devices.",
+    image: lovePercentageLogo,
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/mahi720/love-percentage",
+    webapp: "https://checklovepercentage.netlify.app/",
   },
+
   //   {
   //     id: 8,
   //     title: "Image Background Remover",
