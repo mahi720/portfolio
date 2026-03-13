@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Loader = () => {
-  const [icon, setIcon] = useState("⌨️");
+  const [icon, setIcon] = useState("⚛️");
 
   const icons = ["💻", "⚛️", "⌨️", "🚀", "✨", "🔥", "🎯", "⚡"];
 
