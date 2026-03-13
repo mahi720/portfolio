@@ -28,9 +28,9 @@ const Loader = () => {
         {/* Loading text */}
         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-max">
           <p className="text-purple-400 text-sm font-mono">
-            <span className="text-gray-500"></span> loading...
-            <span className="animate-pulse"></span>
+            loading<span className="dots"></span>
           </p>
+          <span className="animate-pulse"></span>
         </div>
       </div>
 
@@ -46,6 +46,29 @@ const Loader = () => {
         }
         .animate-bounce-slow {
           animation: bounce-slow 2s ease-in-out infinite;
+        }
+
+        .dots::after {
+          content: "";
+          animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+          0% {
+            content: "";
+          }
+          25% {
+            content: ".";
+          }
+          50% {
+            content: "..";
+          }
+          75% {
+            content: "...";
+          }
+          100% {
+            content: "";
+          }
         }
       `}</style>
     </div>
