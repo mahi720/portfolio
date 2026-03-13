@@ -19,7 +19,7 @@ import nodejsLogo from './assets/tech_logo/nodejs.png';
 import expressjsLogo from './assets/tech_logo/express.png';
 import mysqlLogo from './assets/tech_logo/mysql.png';
 import mongodbLogo from './assets/tech_logo/mongodb.png';
-// import firebaseLogo from './assets/tech_logo/firebase.png';
+import firebaseLogo from './assets/tech_logo/firebase.png';
 // import cLogo from './assets/tech_logo/c.png';
 import cppLogo from './assets/tech_logo/cpp.png';
 // import javaLogo from './assets/tech_logo/java.png';
@@ -96,6 +96,7 @@ export const SkillsInfo = [
       { name: 'Express JS', logo: expressjsLogo },
       { name: 'JWT', logo: jwtLogo },
       { name: 'Role Based Access Control', logo: roleBasedAccessControl },
+      { name: 'Firebase', logo: firebaseLogo },
     ],
   },
   {
@@ -114,7 +115,7 @@ export const SkillsInfo = [
     ],
   },
   {
-    title: 'Server / Deployment',
+    title: 'Cloud / Deployment',
     skills: [
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
