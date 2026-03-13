@@ -216,7 +216,7 @@ export const education = [
     date: "Apr 2016 - Apr 2017",
     grade: "60%",
     desc: "I completed my class 10th education from Utkramit M S Kamrauli Bahadurpur, Bihar under the BSEB board. Where I studied Hindi, English, Maths, Science, Social science and Sanskrit.",
-    degree: "BSEB (X)",
+    degree: "Matriculation (Class X) - BSEB"
   },
 ];
 
