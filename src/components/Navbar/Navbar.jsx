@@ -279,6 +279,11 @@ const Navbar = () => {
   const menuItems = [
     { id: "about", label: "About", icon: <FiUser className="text-lg" /> },
     { id: "skills", label: "Skills", icon: <FiCode className="text-lg" /> },
+     {
+      id: "experience",
+      label: "Experience",
+      icon: <FiHome className="text-lg" />,
+    },
     {
       id: "work",
       label: "Projects",
