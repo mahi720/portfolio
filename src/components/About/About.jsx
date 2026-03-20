@@ -179,7 +179,7 @@ const About = () => {
           {/* Resume Buttons with enhanced styling */}
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-5 animate-fadeInUp animation-delay-800">
             <a
-              href="https://drive.google.com/file/d/17w5zMDeq9zCfWbFIqyQcaPtnZtDa-SFY/view?usp=sharing"
+              href="https://drive.google.com/file/d/1GqqLPVC4N-SqCT4wRilkcuMRUmPIXRe8/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative text-white py-3 px-8 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden"
