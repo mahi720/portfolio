@@ -184,7 +184,7 @@ const Footer = () => {
         {/* Email with animation */}
         <div className="mb-8 animate-slideIn-slow animation-delay-200">
           <a
-            href="mailto:somammahi@gmail.com"
+            href="mailto:thesonukumar62@gmail.com"
             className="inline-flex items-center gap-2 group relative"
           >
             <span className="absolute -inset-2 bg-gradient-to-r from-[#8245ec]/20 to-[#a855f7]/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
