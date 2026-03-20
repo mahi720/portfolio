@@ -190,7 +190,7 @@ const Footer = () => {
             <span className="absolute -inset-2 bg-gradient-to-r from-[#8245ec]/20 to-[#a855f7]/20 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
             <MdEmail className="text-xl text-gray-400 group-hover:text-purple-400 transition-colors duration-500" />
             <span className="text-md text-gray-400 group-hover:text-white transition-colors duration-500">
-              somammahi@gmail.com
+              thesonukumar62@gmail.com
             </span>
           </a>
         </div>
@@ -241,7 +241,7 @@ const Footer = () => {
             },
             {
               icon: <SiGmail />,
-              link: "mailto:somammahi@gmail.com",
+              link: "mailto:thesonukumar62@gmail.com",
               name: "Gmail",
             },
           ].map((item, index) => (
@@ -274,9 +274,9 @@ const Footer = () => {
           <p className="text-sm text-gray-500 flex items-center justify-center gap-1">
             <span>© {new Date().getFullYear()} </span>
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-medium">
-              Sonu Kumar
+              Sonu Kumar.
             </span>
-            <span>. All rights reserved.</span>
+            <span> All rights reserved.</span>
           </p>
 
           {/* Made with love */}
