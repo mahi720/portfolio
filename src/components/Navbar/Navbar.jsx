@@ -312,7 +312,7 @@ const Navbar = () => {
     },
     {
       icon: <SiGmail size={20} />,
-      link: "mailto:somammahi@gmail.com",
+      link: "mailto:thesonukumar62@gmail.com",
       name: "Gmail",
       color: "hover:text-red-400",
     },
