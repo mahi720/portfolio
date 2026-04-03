@@ -9,6 +9,7 @@ import Skill from "./components/Skills/Skills";
 import Work from "./components/Work/Work";
 import BlurBlob from "./BlurBlob";
 import Loader from "./components/Loader";
+import ChatBot from "./components/Chatbot/Chatbot";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -43,6 +44,7 @@ const App = () => {
         <Eduction />
         <Contact />
         <Footer />
+        <ChatBot />
       </div>
     </div>
   );
