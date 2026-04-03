@@ -105,7 +105,7 @@ const ChatBot = () => {
           className={`
           fixed z-50 flex flex-col bg-[#050414]/90 backdrop-blur-xl border border-purple-500/20 shadow-2xl transition-all duration-300 animate-slideIn
           // Mobile & Tablet: Right side but smaller
-          bottom-2 right-4 w-[70%] max-w-[600px] h-[600px] rounded-2xl
+          bottom-2 right-4 w-[85%] max-w-[600px] h-[500px] rounded-2xl
           // Desktop
           md:bottom-4 md:right-6 md:w-[400px] md:h-[580px]
           // Large screens
