@@ -290,7 +290,7 @@ const Footer = () => {
         {/* Back to top button */}
         <button
           onClick={() => handleScroll("about")}
-          className="absolute right-4 bottom-4 group"
+          className="absolute left-1 md:left-auto md:right-4 bottom-7 group"
           aria-label="Back to top"
         >
           <div className="relative">
