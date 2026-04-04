@@ -57,6 +57,7 @@ const ChatBot = () => {
         {
           role: "assistant",
           content: data.reply,
+          isNew: true,
         },
       ]);
     } catch (err) {
@@ -65,7 +66,8 @@ const ChatBot = () => {
         ...prev,
         {
           role: "assistant",
-          content: "Server busy! 😢",
+          content: "Currently server busy! 😢",
+          isNew: true,
         },
       ]);
     }
@@ -158,7 +160,7 @@ const ChatBot = () => {
           {/* Messages Area */}
           <div className="flex-1 p-3 md:p-4 overflow-y-auto bg-transparent text-gray-200 custom-scroll">
             {messages.map((msg, i) => (
-              <ChatMessage key={i} msg={msg} />
+              <ChatMessage key={i} msg={msg} scrollToBottom={scrollToBottom} />
             ))}
 
             {/* Typing Indicator */}
