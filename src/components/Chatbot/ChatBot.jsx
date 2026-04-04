@@ -65,7 +65,7 @@ const ChatBot = () => {
         ...prev,
         {
           role: "assistant",
-          content: "Backend not connected! 😅",
+          content: "Server busy! 😢",
         },
       ]);
     }
