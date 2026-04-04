@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const ChatMessage = ({ msg }) => {
+const ChatMessage = ({ msg, scrollToBottom }) => {
   const isUser = msg.role === "user";
+  const [displayedText, setDisplayedText] = useState("");
 
   const formatMessage = (text) => {
     const regex = /(https?:\/\/[^\s]+)|([\w.-]+@[\w.-]+\.\w+)|(\+?\d{10,13})/g;
@@ -54,6 +55,31 @@ const ChatMessage = ({ msg }) => {
     });
   };
 
+  useEffect(() => {
+    if (!msg.isNew) {
+      setDisplayedText(msg.content);
+      return;
+    }
+    setDisplayedText("");
+
+    const words = msg.content.split(" ");
+    let index = 0;
+
+    const interval = setInterval(() => {
+      if (index < words.length) {
+        // setDisplayedText((prev) => prev + words[index] + " ");
+        setDisplayedText((prev) => prev + (words[index] || "") + " ");
+        index++;
+        scrollToBottom();
+      } else {
+        clearInterval(interval);
+        msg.isNew = false;
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [msg.content]);
+
   return (
     <div
       className={`flex items-start space-x-2 mb-3 md:mb-4 animate-fadeIn ${
@@ -100,9 +126,13 @@ const ChatMessage = ({ msg }) => {
               : "bg-[#0f0a2a] text-gray-200 border border-purple-500/20 rounded-bl-none"
           }`}
         >
-          <p className="text-sm md:text-base leading-relaxed whitespace-pre-wrap break-words">
+          {/* <p className="text-sm md:text-base leading-relaxed whitespace-pre-wrap break-words">
             {/* {msg.content} */}
-            <p>{formatMessage(msg.content)}</p>
+          {/* {formatMessage(msg.content)} */}
+          {/* </p> */}
+
+          <p className="text-sm md:text-base leading-relaxed whitespace-pre-wrap break-words">
+            {isUser ? formatMessage(msg.content) : formatMessage(displayedText)}
           </p>
         </div>
       </div>
