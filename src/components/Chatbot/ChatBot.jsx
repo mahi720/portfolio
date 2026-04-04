@@ -10,6 +10,8 @@ import {
 
 const ChatBot = () => {
   const [open, setOpen] = useState(false);
+  const chatContainerRef = useRef(null);
+  const scrollPosition = useRef(0);
   const [messages, setMessages] = useState([
     {
       role: "assistant",
@@ -23,7 +25,27 @@ const ChatBot = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleClose = () => {
+  if (chatContainerRef.current) {
+      scrollPosition.current = chatContainerRef.current.scrollTop;
+    }
+    setOpen(false);
+  };
+
   useEffect(() => {
+  if (open && chatContainerRef.current) {
+      setTimeout(() => {
+        chatContainerRef.current.scrollTop = scrollPosition.current;
+      }, 0);
+    }
+  }, [open]);
+
+  // useEffect(() => {
+  //   scrollToBottom();
+  // }, [messages]);
+
+  useEffect(() => {
+    if (!open) return;
     scrollToBottom();
   }, [messages]);
 
@@ -137,7 +159,7 @@ const ChatBot = () => {
             </div>
             {/* Close Button - Always Visible */}
             <button
-              onClick={() => setOpen(false)}
+              onClick={handleClose}
               className="hover:bg-white/20 rounded-full p-1.5 transition-colors relative z-10"
               aria-label="Close chat"
             >
@@ -158,7 +180,7 @@ const ChatBot = () => {
           </div>
 
           {/* Messages Area */}
-          <div className="flex-1 p-3 md:p-4 overflow-y-auto bg-transparent text-gray-200 custom-scroll">
+          <div ref={chatContainerRef} className="flex-1 p-3 md:p-4 overflow-y-auto bg-transparent text-gray-200 custom-scroll">
             {messages.map((msg, i) => (
               <ChatMessage key={i} msg={msg} scrollToBottom={scrollToBottom} />
             ))}
