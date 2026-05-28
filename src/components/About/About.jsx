@@ -95,7 +95,7 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
-import profileImage from "../../assets/profile3.png";
+import profileImage from "../../assets/profile3.jpeg";
 
 const About = () => {
   return (
