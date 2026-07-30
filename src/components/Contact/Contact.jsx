@@ -128,6 +128,7 @@ const Contact = () => {
   const form = useRef();
   const [isSent, setIsSent] = useState(false);
   const [focusedField, setFocusedField] = useState(null);
+  const [loading, setLoading] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -156,6 +157,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    setLoading(true);
     emailjs
       .sendForm(
         "service_bb6gy99", // EmailJS Service ID
@@ -165,6 +167,7 @@ const Contact = () => {
       )
       .then(
         () => {
+          setLoading(false);
           setIsSent(true);
           form.current.reset();
           toast.success("✨ Message sent successfully!", {
@@ -179,6 +182,7 @@ const Contact = () => {
           });
         },
         (error) => {
+          setLoading(false);
           console.error("Error sending message:", error);
           toast.error("❌ Failed to send message. Please try again.", {
             position: "top-right",
@@ -396,27 +400,55 @@ const Contact = () => {
             {/* Send Button */}
             <button
               type="submit"
-              className="relative w-full group overflow-hidden"
-            >
+              disabled={loading}
+              className={`relative w-full group overflow-hidden ${
+                loading ? "opacity-70 cursor-not-allowed" : ""
+                  }`}
+                >  
               <div className="absolute inset-0 bg-gradient-to-r from-[#8245ec] to-[#a855f7] rounded-xl opacity-100"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
               {/* Button content */}
               <div className="relative flex items-center justify-center gap-3 py-4 px-6 text-white font-semibold text-lg">
-                <span>Send Message</span>
-                <svg
-                  className="w-5 h-5 transform group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform duration-700"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                  />
-                </svg>
+                <span>
+                  {loading ? "Sending..." : "Send Message"}
+                </span>
+                   {loading ? (
+                        <svg
+                          className="w-5 h-5 animate-spin"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          />
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          className="w-5 h-5 transform group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform duration-700"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                          />
+                        </svg>
+                      )}
               </div>
 
               {/* Shine effect */}
