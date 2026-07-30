@@ -202,6 +202,7 @@ const Contact = () => {
                   theme: "dark",
                 });
         }
+      );
   };
 
   return (
