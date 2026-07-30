@@ -165,11 +165,12 @@ const Contact = () => {
         form.current,
         "Cnqtyj2E98A9t06hj", // Replace with your EmailJS Public Key
       )
-      .then(
+           .then(
         () => {
           setLoading(false);
           setIsSent(true);
           form.current.reset();
+      
           toast.success("✨ Message sent successfully!", {
             position: "top-right",
             autoClose: 4000,
@@ -180,21 +181,27 @@ const Contact = () => {
             theme: "dark",
             icon: "🚀",
           });
+      
+          setTimeout(() => {
+            setIsSent(false);
+          }, 5000);
         },
-        (error) => {
-          setLoading(false);
-          console.error("Error sending message:", error);
-          toast.error("❌ Failed to send message. Please try again.", {
-            position: "top-right",
-            autoClose: 4000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
-        },
-      );
+            (error) => {
+                setLoading(false);
+                setIsSent(false);
+              
+                console.error("Error sending message:", error);
+              
+                toast.error("❌ Failed to send message. Please try again.", {
+                  position: "top-right",
+                  autoClose: 4000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  theme: "dark",
+                });
+        }
   };
 
   return (
