@@ -127,6 +127,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
   const form = useRef();
   const [isSent, setIsSent] = useState(false);
+  const [isFadingOut, setIsFadingOut] = useState(false);
   const [focusedField, setFocusedField] = useState(null);
   const [loading, setLoading] = useState(false);
   const sectionRef = useRef(null);
@@ -182,16 +183,17 @@ const Contact = () => {
             icon: "🚀",
           });
 
-            //fade out start
-            setTimeout(() => {
-              document.getElementById('success-message')?.classList.add('fade-out');
-            }, 4500);
-            
-            // completly remove
-            setTimeout(() => {
-              setIsSent(false);
-            }, 5000);
-        },
+       // Fade out start (4.5 sec pe)
+          setTimeout(() => {
+            setIsFadingOut(true);
+          }, 4500);
+          
+          // Complete remove (5 sec pe)
+          setTimeout(() => {
+            setIsSent(false);
+            setIsFadingOut(false);
+          }, 5000);
+
             (error) => {
                 setLoading(false);
                 setIsSent(false);
@@ -470,14 +472,20 @@ const Contact = () => {
             </button>
 
             {/* Success message */}
-            {isSent && (
-                <div 
-                  id="success-message"
-                  className="text-center text-green-400 text-sm mt-4 animate-fadeIn-very-slow transition-all duration-500"
-                >
-                  ✨ Message sent successfully! I'll get back to you soon.
-                </div>
-              )}
+           {isSent && (
+                  <div 
+                    id="success-message"
+                    className="text-center text-green-400 text-sm mt-4 overflow-hidden transition-all duration-700 ease-in-out"
+                    style={{
+                      maxHeight: isFadingOut ? '0px' : '100px',
+                      opacity: isFadingOut ? 0 : 1,
+                      transform: isFadingOut ? 'translateY(20px)' : 'translateY(0)',
+                      marginTop: isFadingOut ? '0px' : '16px'
+                    }}
+                  >
+                    ✨ Message sent successfully! I'll get back to you soon.
+                  </div>
+                )}
           </form>
 
           {/* Contact info footer */}
