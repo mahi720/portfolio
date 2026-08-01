@@ -193,6 +193,7 @@ const Contact = () => {
             setIsSent(false);
             setIsFadingOut(false);
           }, 5000);
+        }
 
             (error) => {
                 setLoading(false);
@@ -724,11 +725,6 @@ const Contact = () => {
 
         .bg-300\\% {
           background-size: 300% 300%;
-        }
-
-        .fade-out {
-          opacity: 0 !important;
-          transform: translateY(-20px) !important;
         }
       `}</style>
     </section>
