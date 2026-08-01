@@ -181,10 +181,16 @@ const Contact = () => {
             theme: "dark",
             icon: "🚀",
           });
-      
-          setTimeout(() => {
-            setIsSent(false);
-          }, 5000);
+
+            //fade out start
+            setTimeout(() => {
+              document.getElementById('success-message')?.classList.add('fade-out');
+            }, 4500);
+            
+            // completly remove
+            setTimeout(() => {
+              setIsSent(false);
+            }, 5000);
         },
             (error) => {
                 setLoading(false);
@@ -465,10 +471,13 @@ const Contact = () => {
 
             {/* Success message */}
             {isSent && (
-              <div className="text-center text-green-400 text-sm mt-4 animate-fadeIn-very-slow">
-                ✨ Message sent successfully! I'll get back to you soon.
-              </div>
-            )}
+                <div 
+                  id="success-message"
+                  className="text-center text-green-400 text-sm mt-4 animate-fadeIn-very-slow transition-all duration-500"
+                >
+                  ✨ Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
           </form>
 
           {/* Contact info footer */}
@@ -707,6 +716,11 @@ const Contact = () => {
 
         .bg-300\\% {
           background-size: 300% 300%;
+        }
+
+        .fade-out {
+          opacity: 0 !important;
+          transform: translateY(-20px) !important;
         }
       `}</style>
     </section>
