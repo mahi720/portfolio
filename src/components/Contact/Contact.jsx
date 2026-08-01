@@ -193,7 +193,7 @@ const Contact = () => {
             setIsSent(false);
             setIsFadingOut(false);
           }, 5000);
-        }
+        },
 
             (error) => {
                 setLoading(false);
