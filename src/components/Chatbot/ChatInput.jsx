@@ -1,12 +1,13 @@
 // ChatInput.jsx
 import React, { useState } from "react";
 
-const ChatInput = ({ onSend }) => {
+const ChatInput = ({ onSend, disabled }) => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (message.trim()) {
+
+    if (message.trim() && !disabled) {
       onSend(message);
       setMessage("");
     }
@@ -25,14 +26,19 @@ const ChatInput = ({ onSend }) => {
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Type your message..."
-          className="flex-1 px-3 md:px-4 py-1.5 md:py-2 text-sm md:text-base bg-purple-900/50 text-white placeholder-purple-300 border border-purple-500 rounded-full focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/50 transition-all duration-200"
+          disabled={disabled}
+          placeholder={
+            disabled ? "Wait for response..." : "Type your message..."
+          }
+          className={`flex-1 px-3 md:px-4 py-1.5 md:py-2 text-sm md:text-base bg-purple-900/50 text-white placeholder-purple-300 border border-purple-500 rounded-full focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/50 transition-all duration-200 ${
+            disabled ? "opacity-50 cursor-not-allowed" : ""
+          }`}
         />
         <button
           type="submit"
-          disabled={!message.trim()}
+          disabled={disabled || !message.trim()}
           className={`p-2 md:p-2 rounded-full transition-all duration-200 ${
-            message.trim()
+            message.trim() && !disabled
               ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg transform hover:scale-105 animate-pulse-send"
               : "bg-gray-600 text-gray-400 cursor-not-allowed"
           }`}
