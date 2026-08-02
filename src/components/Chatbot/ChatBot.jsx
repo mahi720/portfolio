@@ -10,8 +10,8 @@ import {
 
 const ChatBot = () => {
   const [open, setOpen] = useState(false);
-  const chatContainerRef = useRef(null);
-  const scrollPosition = useRef(0);
+  // const chatContainerRef = useRef(null);
+  // const scrollPosition = useRef(0);
   const [messages, setMessages] = useState([
     {
       role: "assistant",
@@ -19,40 +19,23 @@ const ChatBot = () => {
     },
   ]);
   const [isTyping, setIsTyping] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleClose = () => {
-  if (chatContainerRef.current) {
-      scrollPosition.current = chatContainerRef.current.scrollTop;
-    }
-    setOpen(false);
-  };
-
   useEffect(() => {
-  if (open && chatContainerRef.current) {
-      setTimeout(() => {
-        chatContainerRef.current.scrollTop = scrollPosition.current;
-      }, 0);
-    }
-  }, [open]);
-
-  // useEffect(() => {
-  //   scrollToBottom();
-  // }, [messages]);
-
-  useEffect(() => {
-    if (!open) return;
     scrollToBottom();
   }, [messages]);
 
   const sendMessage = async (text) => {
-    const userMessage = { role: "user", content: text };
-    setMessages((prev) => [...prev, userMessage]);
+    if (isTyping || isAnimating) return;
 
+    const userMessage = { role: "user", content: text };
+
+    setMessages((prev) => [...prev, userMessage]);
     setIsTyping(true);
 
     try {
@@ -74,6 +57,9 @@ const ChatBot = () => {
 
       const data = await res.json();
 
+      setIsTyping(false);
+      setIsAnimating(true);
+
       setMessages((prev) => [
         ...prev,
         {
@@ -84,17 +70,19 @@ const ChatBot = () => {
       ]);
     } catch (err) {
       console.log(err);
+
+      setIsTyping(false);
+      setIsAnimating(true);
+
       setMessages((prev) => [
         ...prev,
         {
           role: "assistant",
-          content: "Currently server busy! 😢",
+          content: "Backend not connected! 😅",
           isNew: true,
         },
       ]);
     }
-
-    setIsTyping(false);
   };
 
   return (
@@ -129,7 +117,7 @@ const ChatBot = () => {
           className={`
           fixed z-50 flex flex-col bg-[#050414]/90 backdrop-blur-xl border border-purple-500/20 shadow-2xl transition-all duration-300 animate-slideIn
           // Mobile & Tablet: Right side but smaller
-          bottom-2 right-4 w-[85%] max-w-[600px] h-[500px] rounded-2xl
+          bottom-2 right-4 w-[70%] max-w-[500px] h-[400px] rounded-2xl
           // Desktop
           md:bottom-4 md:right-6 md:w-[400px] md:h-[580px]
           // Large screens
@@ -159,7 +147,7 @@ const ChatBot = () => {
             </div>
             {/* Close Button - Always Visible */}
             <button
-              onClick={handleClose}
+              onClick={() => setOpen(false)}
               className="hover:bg-white/20 rounded-full p-1.5 transition-colors relative z-10"
               aria-label="Close chat"
             >
@@ -180,9 +168,14 @@ const ChatBot = () => {
           </div>
 
           {/* Messages Area */}
-          <div ref={chatContainerRef} className="flex-1 p-3 md:p-4 overflow-y-auto bg-transparent text-gray-200 custom-scroll">
+          <div className="flex-1 p-3 md:p-4 overflow-y-auto bg-transparent text-gray-200 custom-scroll">
             {messages.map((msg, i) => (
-              <ChatMessage key={i} msg={msg} scrollToBottom={scrollToBottom} />
+              <ChatMessage
+                key={i}
+                msg={msg}
+                scrollToBottom={scrollToBottom}
+                onTypingComplete={() => setIsAnimating(false)}
+              />
             ))}
 
             {/* Typing Indicator */}
@@ -237,7 +230,7 @@ const ChatBot = () => {
           )}
 
           {/* Input Area */}
-          <ChatInput onSend={sendMessage} />
+          <ChatInput onSend={sendMessage} disabled={isTyping || isAnimating} />
         </div>
       )}
 
