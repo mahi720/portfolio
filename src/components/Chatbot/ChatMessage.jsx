@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ChatMessage = ({ msg, scrollToBottom }) => {
+const ChatMessage = ({ msg, scrollToBottom, onTypingComplete }) => {
   const isUser = msg.role === "user";
   const [displayedText, setDisplayedText] = useState("");
 
@@ -60,6 +60,7 @@ const ChatMessage = ({ msg, scrollToBottom }) => {
       setDisplayedText(msg.content);
       return;
     }
+
     setDisplayedText("");
 
     const words = msg.content.split(" ");
@@ -67,13 +68,13 @@ const ChatMessage = ({ msg, scrollToBottom }) => {
 
     const interval = setInterval(() => {
       if (index < words.length) {
-        // setDisplayedText((prev) => prev + words[index] + " ");
         setDisplayedText((prev) => prev + (words[index] || "") + " ");
         index++;
         scrollToBottom();
       } else {
         clearInterval(interval);
         msg.isNew = false;
+        onTypingComplete?.();
       }
     }, 100);
 
